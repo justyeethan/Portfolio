@@ -1,33 +1,32 @@
-import logo from "./logo.svg";
 import "@fontsource/roboto";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 import "./App.css";
+import NavBar from "./Components/NavBar";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Projects from "./Components/Projects";
+import Clubs from "./Components/Clubs";
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
+      <NavBar />
       <Switch>
         <Route exact path="/">
-          <h1>Routing Test</h1>
+          <Home />
         </Route>
         <Route exact path="/About">
-          <h1>Routing Test 1</h1>
+          <About />
         </Route>
         <Route exact path="/Projects">
-          <h1>Routing Test 2</h1>
-        </Route>
-        <Route exact path="/Experience">
-          <h1>Routing Test 3</h1>
+          <Projects />
         </Route>
         <Route exact path="/Clubs">
-          <h1>Routing Test 4</h1>
-        </Route>
-        <Route exact path="/Blogs">
-          <h1>Routing Test 5</h1>
+          <Clubs />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </div>
   );
 }
 
